@@ -1,11 +1,11 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { TransitionLink } from "gatsby-plugin-transitions";
 
-import Layout from "../components/layout"
 import Seo from "../components/seo"
+import PageWrap from '../components/pagewrap'
 
 const UsingDSG = () => (
-  <Layout>
+  <PageWrap>
     <h1>
       Hello from a <b>DSG Page</b>
     </h1>
@@ -17,8 +17,8 @@ const UsingDSG = () => (
       </a>
       .
     </p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
+    <TransitionLink to="/">Go back to the homepage</TransitionLink>
+  </PageWrap>
 )
 
 export const Head = () => <Seo title="Using DSG" />

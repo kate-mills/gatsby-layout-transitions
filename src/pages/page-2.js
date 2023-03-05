@@ -1,15 +1,15 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { TransitionLink } from "gatsby-plugin-transitions";
 
-import Layout from "../components/layout"
 import Seo from "../components/seo"
+import PageWrap from '../components/pagewrap'
 
 const SecondPage = () => (
-  <Layout>
+  <PageWrap>
     <h1>Hi from the second page</h1>
     <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
+  <TransitionLink to="/">Go back to the homepage</TransitionLink>
+  </PageWrap>
 )
 
 export const Head = () => <Seo title="Page two" />

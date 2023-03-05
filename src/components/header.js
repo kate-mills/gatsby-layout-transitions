@@ -1,7 +1,7 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { TransitionLink } from "gatsby-plugin-transitions";
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header
     style={{
       margin: `0 auto`,
@@ -11,15 +11,13 @@ const Header = ({ siteTitle }) => (
       justifyContent: `space-between`,
     }}
   >
-    <Link
+    <TransitionLink
       to="/"
       style={{
         fontSize: `var(--font-sm)`,
         textDecoration: `none`,
       }}
-    >
-      {siteTitle}
-    </Link>
+    >Kate Default Starter</TransitionLink>
     <img
       alt="Gatsby logo"
       height={20}

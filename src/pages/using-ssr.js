@@ -1,12 +1,13 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { TransitionLink } from "gatsby-plugin-transitions";
 
-import Layout from "../components/layout"
+
 import Seo from "../components/seo"
+import PageWrap from '../components/pagewrap'
 
 const UsingSSR = ({ serverData }) => {
   return (
-    <Layout>
+    <PageWrap>
       <h1>
         This page is <b>rendered server-side</b>
       </h1>
@@ -27,8 +28,8 @@ const UsingSSR = ({ serverData }) => {
         </a>
         .
       </p>
-      <Link to="/">Go back to the homepage</Link>
-    </Layout>
+      <TransitionLink to="/">Go back to the homepage</TransitionLink>
+    </PageWrap>
   )
 }
 

@@ -1,8 +1,9 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { TransitionLink } from "gatsby-plugin-transitions";
 
-import Layout from "../components/layout"
+import { StaticImage } from "gatsby-plugin-image"
+import PageWrap from '../components/pagewrap'
+
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
@@ -70,7 +71,7 @@ const moreLinks = [
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
-  <Layout>
+  <PageWrap>
     <div className={styles.textCenter}>
       <StaticImage
         src="../images/example.png"
@@ -88,7 +89,7 @@ const IndexPage = () => (
         <b>Example pages:</b>{" "}
         {samplePageLinks.map((link, i) => (
           <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
+            <TransitionLink to={link.url}>{link.text}</TransitionLink>
             {i !== samplePageLinks.length - 1 && <> · </>}
           </React.Fragment>
         ))}
@@ -115,7 +116,7 @@ const IndexPage = () => (
         {i !== moreLinks.length - 1 && <> · </>}
       </React.Fragment>
     ))}
-  </Layout>
+  </PageWrap>
 )
 
 /**
